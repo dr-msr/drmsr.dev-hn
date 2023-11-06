@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 		GQL_ENDPOINT,
 		PostsByPublicationDocument,
 		{
-			first: 5,
+			first: 3,
 			host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
 		},
 	);
