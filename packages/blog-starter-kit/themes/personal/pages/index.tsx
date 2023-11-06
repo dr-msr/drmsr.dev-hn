@@ -41,7 +41,7 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 			GQL_ENDPOINT,
 			MorePostsByPublicationDocument,
 			{
-				first: 5,
+				first: 20,
 				host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
 				after: pageInfo.endCursor,
 			},
@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 		GQL_ENDPOINT,
 		PostsByPublicationDocument,
 		{
-			first: 20,
+			first: 5,
 			host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
 		},
 	);
