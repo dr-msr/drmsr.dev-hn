@@ -41,7 +41,7 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 			GQL_ENDPOINT,
 			MorePostsByPublicationDocument,
 			{
-				first: 20,
+				first: 3,
 				host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
 				after: pageInfo.endCursor,
 			},
@@ -88,7 +88,7 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 					{posts.length > 0 && <MinimalPosts context="home" posts={posts} />}
 					{!loadedMore && pageInfo.hasNextPage && pageInfo.endCursor && (
 						<button className="bg-white" onClick={loadMore}>
-							Load more
+							Load more now
 						</button>
 					)}
 					{loadedMore && pageInfo.hasNextPage && pageInfo.endCursor && (
